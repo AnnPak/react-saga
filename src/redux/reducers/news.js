@@ -10,18 +10,12 @@ const news = (state = initialState, { type, payload }) => {
     case SET_LATEST_NEWS:
       return {
         ...state,
-        latestNews:
-          payload !== undefined
-            ? [...state.latestNews, ...payload]
-            : [...state.latestNews],
+        latestNews: payload
       };
     case SET_POPULAR_NEWS:
       return {
         ...state,
-        popularNews:
-          payload !== undefined
-            ? [...state.popularNews, ...payload]
-            : [...state.popularNews],
+        popularNews: payload
       };
     default:
       return state;
